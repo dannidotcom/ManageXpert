@@ -8,7 +8,7 @@ export type TasksDocument = HydratedDocument<Tasks>;
 
 @Schema({ timestamps: true })
 export class Tasks {
-    @Prop({ type: mongoose.Types.ObjectId, ref: 'Project', required: true })
+    @Prop({ type: mongoose.Types.ObjectId, ref: 'Projects', required: true })
     projectId: Projects;
 
     @Prop({ type: String })

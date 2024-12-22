@@ -1,11 +1,11 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 
-export type CatDocument = HydratedDocument<Notifications>;
+export type NotificationsDocument = HydratedDocument<Notifications>;
 
-@Schema()
+@Schema({ timestamps: true })
 export class Notifications {
     
 }
 
-export const CatSchema = SchemaFactory.createForClass(Notifications);
+export const NotificationsSchema = SchemaFactory.createForClass(Notifications);
